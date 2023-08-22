@@ -82,12 +82,16 @@ def instructions(win, timer, ser, keymap, part):
 
 #===========================================================================================================================
 
-def nbackStim(win, rectPos, stim, stimDurationFrames):
+def nbackStim(win, digitalPhotoRight, rectPos, stim, stimDurationFrames):
     rectPos.pos = stim
     rectPos.setAutoDraw(True)
+    digitalPhotoRight.setAutoDraw(True)
+    
     for frame in range(stimDurationFrames): # 0(n)
         win.flip()
+        
     rectPos.setAutoDraw(False)
+    digitalPhotoRight.setAutoDraw(False)
     return
 
 #===========================================================================================================================
